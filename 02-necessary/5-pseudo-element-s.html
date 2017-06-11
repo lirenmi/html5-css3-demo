@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伪元素选择器</title>
+    <style media="screen">
+      /*===== 伪元素选择器 指定元素内容的一部分 =====*/
+
+      /*first-line */
+      /*p::first-letter {
+        font-size: 24px;
+        color: red;
+      }*/
+
+      /*after */
+      /*ul li::before {
+        content: " New !";
+        color: red;
+      }*/
+
+      .content {
+        width: 400px;
+        height: 200px;
+        border: 1px solid red;
+
+      }
+      .column {
+        width: 50%;
+        float: left;
+        text-align: center;
+      }
+
+      .content::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- <p>伪元素选择器 指定元素内容的一部分伪元素选择器 指定元素内容的一部分伪元素选择器 指定元素内容的一部分伪元素选择器 指定元素内容的一部分</p>
+
+    <ul>
+      <li>2017-xx定元素 </li>
+      <li>2017-xx定元素 </li>
+      <li>2017-xx定元素 </li>
+      <li>2017-xx定元素 </li>
+    </ul> -->
+
+    <div class="content">
+      <div class="column">
+        left
+      </div>
+      <div class="column">
+        right
+      </div>
+
+    </div>
+    <footer>
+      <p>power by lirenmi.cn</p>
+    </footer>
+
+  </body>
+</html>

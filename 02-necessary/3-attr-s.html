@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>attribute slector</title>
+
+    <style media="screen">
+
+    /*   [attribute]    */
+    /*p[class] {
+      color: red;
+    }*/
+
+    /* [attribute="value"] attr 等于 value*/
+    /*p[class="text"] {
+      color: green;
+    }*/
+
+    /* [attribute~="value"] attr 包含 value(完整单词) */
+    /*p[class~="text"] {
+      color: red;
+    }*/
+
+    /*[attribute*="value"] attr 包含 value 字符串*/
+    /*p[class*="te"] {
+      background-color: #eee;
+    }*/
+
+    /* [attribute|="value"] attr 以 value（完整字符串，用 - 隔开） 开始 */
+    /*p[class|="text"] {
+      color: #97d01d;
+    }*/
+
+    /*[attribute^="value"] attr 以 value 字符串开始 */
+    /*p[class^="tex"] {
+      color: red;
+    }*/
+
+    /* [attribute$="value"] attr 以 value 字符串结束 */
+    /*p[class$="xt"] {
+      color: red;
+    }*/
+
+    </style>
+  </head>
+  <body>
+    <p>text 1</p>
+    <p class="text">text 2</p>
+    <p class="text-red">text 3</p>
+    <p class="">text 4</p>
+    <p class="text red">text 5</p>
+    <p class="redtext">text 6</p>
+  </body>
+</html>

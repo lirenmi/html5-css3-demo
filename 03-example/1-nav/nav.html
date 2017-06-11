@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>navigation </title>
+    <style media="screen">
+      html {
+        font-size: 15px;
+        font-family: sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      /*   v - nav */
+      .nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f1f1f1;
+        width: 160px;
+        overflow: hidden;
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      .nav li a {
+        display: block;
+        color: #000;
+        text-decoration: none;
+        padding: 12px 16px;
+      }
+      .nav li a:hover {
+        background-color: #999;
+      }
+      .nav li a.active {
+        background-color: #a62d2d;
+        color: #fff;
+      }
+
+
+
+      /* ---- h nva ---*/
+
+      .nav-h {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: #333;
+        overflow: hidden;
+      }
+      .nav-h li {
+        float: left;
+        border-right: 1px solid #999;
+      }
+      .nav-h li:last-child {
+        border-right:none;
+      }
+      .nav-h li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 16px;
+        text-align: center;
+      }
+      .nav-h li a:hover {
+        background-color: #000;
+      }
+      .nav-h li a.active {
+        background-color: #a62d2d;
+      }
+      .nav-h li.right {
+        float: right;
+      }
+
+      /* nav-dropdown */
+
+      .nav-dropdown {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: #333;
+        overflow: hidden;
+      }
+      .nav-dropdown li {
+        float: left;
+
+      }
+      .nav-dropdown li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 16px;
+        text-align: center;
+      }
+      .nav-dropdown li a:hover {
+        background-color: #000;
+      }
+      .nav-dropdown li a.active {
+        background-color: #a62d2d;
+      }
+      .nav-dropdown li.right {
+        float: right;
+      }
+
+      .dropdown {
+        float: left;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #666;
+        min-width: 160px;
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="nav">
+      <li><a href="#">首页</a></li>
+      <li><a href="#" class="active">作品</a></li>
+      <li><a href="#">商城</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
+    <br>
+    <ul class="nav-h">
+      <li><a href="#">首页</a></li>
+      <li><a href="#" class="active">作品</a></li>
+      <li><a href="#">商城</a></li>
+      <li class="right"><a href="#" >关于</a></li>
+    </ul>
+    <br>
+    <ul class="nav-dropdown">
+      <li><a href="#">首页</a></li>
+      <li><a href="#" class="active">作品</a></li>
+      <li><a href="#">商城</a></li>
+      <li class="dropdown">
+        <a href="#">更多</a>
+        <div class="dropdown-content">
+          <a href="#">合作</a>
+          <a href="#">合作</a>
+          <a href="#">合作</a>
+        </div>
+      </li>
+      <li class="right"><a href="#" >关于</a></li>
+    </ul>
+  </body>
+</html>

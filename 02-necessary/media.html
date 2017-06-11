@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style media="screen">
+      div {
+        width: 400px;
+        height: 300px;
+        background-color: red;
+        margin: 5px;
+      }
+
+      @media only screen and (min-width:600px) and (max-width:768px) {
+        div {
+          background-color: green;
+        }
+        .w {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://unsplash.it/700/300?image=1083" width="100%" alt="">
+    <div>
+    </div>
+    <div class="w">
+    </div>
+
+  </body>
+</html>

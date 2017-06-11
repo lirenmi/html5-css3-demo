@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>modal</title>
+    <style media="screen">
+      *, *::after, *::before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .hover-shadow:hover {
+        -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.2), 0 4px 20px rgba(0,0,0,0.19);
+        -moz-box-shadow: 0 4px 10px rgba(0,0,0,0.2), 0 4px 20px rgba(0,0,0,0.19);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2), 0 4px 20px rgba(0,0,0,0.19);
+
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+      .button {
+        border: none;
+        background-color: #444;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 16px;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+      }
+      .modal {
+        background-color: rgba(0,0,0,0.3);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        overflow: auto;
+        display: none;
+      }
+      .modal-dialog {
+        margin: 32px 0;
+      }
+      .modal-content {
+        background-color: #fff;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16px;
+        border-radius: 5px;
+        box-shadow: 0 4px 30px 0 rgba(0,0,0,0.3),0 5px 40px 0 rgba(0,0,0,0.2);
+        -webkit-animation: modalzoom 0.5s;
+        animation: modalzoom 0.5s;
+      }
+      @-webkit-keyframes modalzoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+      }
+      @keyframes modalzoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+      }
+
+      .close-modal-animate {
+        -webkit-animation: closemadlanimate 0.5s;
+        animation: closemadlanimate 0.5s;
+      }
+      @-webkit-keyframes closemadlanimate {
+        from {transform: scale(1);}
+        to {transform: scale(0);}
+      }
+      @keyframes closemadlanimate {
+        from {transform: scale(1);}
+        to {transform: scale(0);}
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .modal-heading::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .modal-title {
+        font-weight: 400;
+        font-size: 20px;
+        display: inline-block;
+      }
+      .close-btn {
+        float: right;
+        border: none;
+        background-color: transparent;
+        color: #000;
+        font-size: 24px;
+        font-weight: 400;
+        cursor: pointer;
+        padding: 0;
+      }
+      .close-btn:hover {
+        color: #e88e8e;
+      }
+      .modal-inner {
+        font-size: 14px;
+      }
+      .modal-footer {
+        text-align: right;
+      }
+      .close-button, .ok-button {
+        border: none;
+        background-color: transparent;
+        color: #e88e8e;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <button class="button hover-shadow" onclick="openModal();">open modal</button>
+      <div id="modal" class="modal">
+        <div class="modal-dialog">
+          <div id="modalContent" class="modal-content ">
+            <div class="modal-heading">
+              <h2 class="modal-title">Modal Title</h2>
+              <button class="close-btn" onclick="closeModal();">×</button>
+            </div>
+            <div class="modal-inner">
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <img src="https://unsplash.it/900/500?image=1067" width="900" height="500" alt="content">
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div class="modal-footer">
+              <button class="close-button" onclick="closeModal();">CLOSE</button>
+              <button class="ok-button">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript">
+    
+      function openModal() {
+        var modalNode = document.getElementById('modal');
+        modalNode.style.display = "block";
+        var modalContentNode = document.getElementById('modalContent');
+        modalContentNode.className = modalContentNode.className.replace("close-modal-animate", "");
+      }
+      function closeModal() {
+        var modalNode = document.getElementById('modal');
+        var modalContentNode = document.getElementById('modalContent');
+        modalContentNode.className = modalContentNode.className + " close-modal-animate";
+        setTimeout(function () {
+          modalNode.style.display = "none";
+        }, 400);
+      }
+    </script>
+  </body>
+</html>

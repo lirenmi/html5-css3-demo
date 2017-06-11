@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>slideshow</title>
+    <style media="screen">
+    .relative-contaner {
+      position: relative;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .top-middle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,0);
+    }
+    .top-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .middle-left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0,-50%);
+    }
+    .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+    .middle-right {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -moz-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+      -webkit-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+    }
+
+    .bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .bottom-middle {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -moz-transform: translate(-50%,0);
+      -ms-transform: translate(-50%,0);
+      -webkit-transform: translate(-50%,0);
+      transform: translate(-50%,0);
+    }
+    .bottom-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+    .show {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+
+
+    .relative-contaner::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .row::after, .row::before {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .col {
+      float: left;
+    }
+
+    .l1 {width: 8.33%}
+    .l2 {width: 16.66%}
+    .l3 {width: 25%}
+    .l4 {width: 33.33%}
+    .l5 {width: 41.66%}
+    .l6 {width: 50%}
+    .l7 {width: 58.33%}
+    .l8 {width: 66.66%}
+    .l9 {width: 75%}
+    .l10 {width: 83.33%}
+    .l11 {width: 91.66%}
+    .l12 {width: 100%}
+
+    @media only screen and (max-width: 993px) {
+      .m1 {width: 8.33%}
+      .m2 {width: 16.66%}
+      .m3 {width: 25%}
+      .m4 {width: 33.33%}
+      .m5 {width: 41.66%}
+      .m6 {width: 50%}
+      .m7 {width: 58.33%}
+      .m8 {width: 66.66%}
+      .m9 {width: 75%}
+      .m10 {width: 83.33%}
+      .m11 {width: 91.66%}
+      .m12 {width: 100%}
+    }
+
+    @media only screen and (max-width: 600px) {
+      .s1 {width: 8.33%}
+      .s2 {width: 16.66%}
+      .s3 {width: 25%}
+      .s4 {width: 33.33%}
+      .s5 {width: 41.66%}
+      .s6 {width: 50%}
+      .s7 {width: 58.33%}
+      .s8 {width: 66.66%}
+      .s9 {width: 75%}
+      .s10 {width: 83.33%}
+      .s11 {width: 91.66%}
+      .s12 {width: 100%}
+    }
+
+    .animate-opacity {
+      -webkit-animation: animationopacity 2s;
+      animation: animationopacity 2s;
+    }
+    @-webkit-keyframes animationopacity {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes animationopacity {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .animate-fading {
+      -webkit-animation: animationofading 10s infinite;
+      animation: animationofading 10s infinite;
+    }
+    @-webkit-keyframes animationofading {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+    @keyframes animationofading {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+
+
+    /*/-----------------------------*/
+
+
+      /*手动滚动*/
+      .contaner1 {
+        max-width: 600px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .button {
+        border: none;
+        background-color: #444;
+        color: #fff;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .button:hover {
+        background-color: #ccc;
+        color: #000;
+      }
+
+      /*图片导航*/
+      .contaner2 {
+        background-color: rgb(101, 97, 95);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .padding {
+        padding: 4px;
+      }
+      .point {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
+      /*自动播放*/
+      .contaner3 {
+        background-color: #454649;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h2>手动滚动</h2>
+    <div class="contaner1 relative-contaner">
+      <div class="relative-contaner">
+        <button class="button middle">中间</button>
+        <img src="https://unsplash.it/900/450?image=962" width="900" class="slide" height="450" alt="img">
+      </div>
+      <img src="https://unsplash.it/900/450?image=974" width="900" class="slide" height="450" style="display:none" alt="img">
+      <img src="https://unsplash.it/900/450?image=973" width="900" class="slide" height="450" style="display:none" alt="img">
+      <button class="button middle-left" onclick="go(-1);">&#60;</button>
+      <button class="button middle-right" onclick="go(1);" >&#62;</button>
+    </div>
+    <h2>图片导航</h2>
+    <div class="contaner2">
+      <img src="https://unsplash.it/900/450?image=962" width="900" class="slide2 animate-opacity" height="450"  alt="img">
+      <img src="https://unsplash.it/900/450?image=974" width="900" class="slide2 animate-opacity" height="450"  style="display:none" alt="img">
+      <img src="https://unsplash.it/900/450?image=973" width="900" class="slide2 animate-opacity" height="450"  style="display:none" alt="img">
+      <div class="row">
+        <div class="col l4 padding">
+          <img src="https://unsplash.it/200/100?image=962" width="200" onclick="goto(1);" class="point " height="100"  alt="img">
+        </div>
+        <div class="col l4 padding">
+          <img src="https://unsplash.it/200/100?image=974" width="200"  onclick="goto(2);" class="point" height="100"  alt="img">
+        </div>
+        <div class="col l4 padding">
+          <img src="https://unsplash.it/200/100?image=973" width="200"  onclick="goto(3);" class="point" height="100"  alt="img">
+        </div>
+      </div>
+    </div>
+
+    <h2>自动播放</h2>
+    <div class="contaner3">
+      <img src="https://unsplash.it/900/450?image=962" width="900" class="slide3 animate-fading" height="450"  alt="img">
+      <img src="https://unsplash.it/900/450?image=974" width="900" class="slide3 animate-fading" height="450"  style="display:none" alt="img">
+      <img src="https://unsplash.it/900/450?image=973" width="900" class="slide3 animate-fading" height="450"  style="display:none" alt="img">
+    </div>
+
+
+    <script type="text/javascript">
+      var index = 1;
+      function go(n) {
+        index += n;
+        show(index);
+      }
+
+      function show(n) {
+        var slides = document.getElementsByClassName('slide');
+        if (n > slides.length) {index = 1}
+        if (n < 1) {index = slides.length}
+        for (var i=0; i<slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[index-1].style.display = "";
+      }
+
+
+      // 图片导航
+      function goto(n) {
+        var slides = document.getElementsByClassName('slide2');
+        for (var i=0; i<slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[n-1].style.display = "";
+
+      }
+
+      //自动播放
+      var index3 = 1;
+      autoPlay();
+
+      function autoPlay() {
+        var slides = document.getElementsByClassName('slide3');
+        for (var i=0; i<slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        if (index3 > slides.length) {index3 = 1}
+        slides[index3-1].style.display = "";
+        index3++;
+
+        setTimeout(autoPlay, 9000);
+      }
+
+    </script>
+  </body>
+</html>

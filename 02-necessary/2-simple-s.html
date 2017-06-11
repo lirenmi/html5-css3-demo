@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS 组合选择器</title>
+
+    <style media="screen">
+       /*---- 简单选择器 ------ */
+      /*1、元素*/
+      /*h1 {
+        font-size: 16px;
+        color: grey;
+      }
+      p {
+        color: red;
+      }*/
+      /*2、class*/
+
+      /*.blue {
+        color: blue;
+      }*/
+
+      /*3、id*/
+
+      /*#content {
+        font-size: 18px;
+        font-weight: 600;
+        color: green;
+      }*/
+
+
+      /*----- 组合选择器 ------*/
+      /* space   >   +    ~ */
+
+
+      /* space   后裔 */
+      /*div p {
+        background-color: grey;
+      }*/
+
+      /* > 子类选择 */
+      /*div > p {
+        color: red;
+      }*/
+
+      /* + 相邻兄弟元素选择 */
+      /*div + p {
+        color: blue;
+      }*/
+
+      /* ~  兄弟元素选择 a*/
+
+      div ~ p {
+        color: yellow;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!--––––––––––––––––– 简单选择器 –––––––––––––––––––-->
+    <!-- <h1>CSS简单选择器和组合选择器</h1>
+    <p >text 1</p>
+    <p >text 2</p>
+    <p >text 3</p>
+    <p class="blue">text 4</p>
+    <p id="content">text 5</p> -->
+
+<!--––––––––––––––––– 组合选择器 –––––––––––––––––––-->
+<div>
+  <p>组合选择器</p>
+  <p>段落内容一</p>
+  <span><p>段落内容二</p></span>
+</div>
+<p>段落内容三</p>
+<p>段落内容四</p>
+
+
+  </body>
+</html>

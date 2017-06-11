@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>framwork demo</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="top">
+      <ul class="nav black nav-h">
+        <li><a href="#" class="text-lightgray large hover-lightgray "><i class="fa fa-home margin-right"></i>Logo</a></li>
+        <li class="hide-small"><a href="#" class="text-lightgray large hover-lightgray "><i class="fa fa-firefox"></i></a></li>
+        <li  class="hide-small"><a href="#" class="text-lightgray large hover-lightgray "><i class="fa fa-envelope"></i></a></li>
+        <li class="hide-small"><a href="#" class="text-lightgray large hover-lightgray "><i class="fa fa-user"></i></a></li>
+        <li class="hide-small dropdown" >
+          <a href="#" class="text-lightgray large hover-lightgray "><i class="fa fa-bell"></i>
+            <sup class="sup red">3</sup>
+          </a>
+          <div class="dropdown-content">
+            <a href="#">3个好友请求</a>
+            <a href="#">有人赞了你的文章</a>
+            <a href="#">有新的留言</a>
+          </div>
+        </li>
+        <li class="hide-small right">
+          <a href="#" class="text-lightgray large hover-lightgray ">
+            <img src="https://unsplash.it/300/300?image=1005" width="25" height="25" class="circle" alt="author">
+          </a>
+        </li>
+        <li class="hide-medium hide-large right">
+          <a href="#" data-toggle="menu" class="text-lightgray large hover-black ">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul data-target="menu" class="nav hide-medium hide-large black mobile" style="display:none">
+        <li><a href="#" class="text-lightgray  hover-lightgray ">Link</a></li>
+        <li><a href="#" class="text-lightgray  hover-lightgray ">Link</a></li>
+        <li><a href="#" class="text-lightgray  hover-lightgray ">Link</a></li>
+      </ul>
+    </nav>
+
+    <!-- main content -->
+    <div class="margin-top-64 padding-tb">
+      <div class="row-padding">
+        <!-- col 1 -->
+        <div class="col l3 s12">
+          <div class="shadow container padding-tb round margin-bottom-24">
+            <p class="center">我的主页</p>
+            <div class="center">
+              <img src="https://unsplash.it/300/300?image=823" class="circle" width="110" height="110" alt="author">
+            </div>
+            <hr>
+            <ul class="list">
+              <li><i class="fa fa-pencil text-red margin-right"></i>Designer, UI</li>
+              <li><i class="fa fa-calendar text-red margin-right"></i>London, UK</li>
+              <li><i class="fa fa-birthday-cake text-red margin-right"></i>April 1, 1988</li>
+            </ul>
+          </div>
+          <!-- list -->
+          <div class="shadow lightred container padding-tb round margin-bottom-24">
+            <ul class="list">
+              <li class="hover-red"><i class="fa fa-pencil  margin-right"></i>Designer, UI</li>
+              <li class="hover-red"><i class="fa fa-calendar  margin-right"></i>London, UK</li>
+              <li class="hover-red"><i class="fa fa-birthday-cake  margin-right"></i>April 1, 1988</li>
+            </ul>
+          </div>
+          <!-- tag -->
+          <div class="shadow container padding-tb round margin-bottom-24">
+            <span class="tag lightred">最新</span>
+            <span class="tag lightgrey">lirenmi.cn</span>
+            <span class="tag lightblue">标签</span>
+            <span class="tag lightgrey">游戏</span>
+            <span class="tag lightgrey">文章</span>
+            <span class="tag lightblue">艺术</span>
+            <span class="tag lightblue">音乐</span>
+            <span class="tag lightgrey">旅行</span>
+            <span class="tag lightred">成长</span>
+            <span class="tag lightblue">音乐</span>
+            <span class="tag lightgrey">旅行</span>
+            <span class="tag lightred">成长</span>
+            <span class="tag lightblue">音乐</span>
+            <span class="tag lightgrey">旅行</span>
+            <span class="tag lightred">成长</span>
+          </div>
+          <!-- msg -->
+          <div class="shadow relative-contaner lightyellow container padding-tb round margin-bottom-24">
+            <button class="btn top-right" onclick="this.parentNode.style.display = 'none';">×</button>
+            <h4>Hey！</h4>
+            <p class="small">有人正在浏览您的主页，看看 TA 是谁</p>
+          </div>
+
+        </div>
+
+        <!-- col 2 -->
+        <div class="col l7 s12">
+
+          <!-- form -->
+          <div class="shadow container padding-tb margin-bottom-24 round">
+            <form class="" action="#" method="post">
+              <div class="form-group-label">
+                <label for="name" class="floating-label">发布你的状态：</label>
+                <input type="text" class="form-control" id="name" name="name" value="">
+              </div>
+              <div class="right-align">
+                <button type="submit" class="button lightred" ><i class="fa fa-pencil margin-right-8"></i>发送</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- article 1 -->
+          <div class="shadow  padding-tb margin-bottom-24 round">
+            <div class="container">
+              <img src="https://unsplash.it/300/300?image=1005" width="60" height="60" class="circle left margin-right" alt="author">
+              <span class="right text-grey">1 min</span>
+              <h3 >Jon Deno</h3>
+              <br>
+              <hr class="clear">
+              <p>报道发出疑问，“韩国军队究竟是为了谁，又是谁的军队？”“当真是韩国国民的军队吗？”，并称可能是因为“已经有过两次通过军事政变推翻国民选择的经历”，所以将韩国国民和总统视作统帅才会如此别扭，否则韩国军方为何会如此盲目地效忠美国</p>
+            </div>
+            <div class="row-padding">
+              <div class="col l6 s12 margin-bottom">
+                <img src="https://unsplash.it/300/200?image=826" width="300" height="200" class="img" alt="">
+              </div>
+              <div class="col l6 s12 margin-bottom">
+                <img src="https://unsplash.it/300/200?image=791" width="300" height="200" class="img" alt="">
+              </div>
+            </div>
+            <div class="container">
+              <button class="button red"><i class="fa fa-thumbs-up margin-right-8"></i>喜欢</button>
+              <button class="button "><i class="fa fa-comment margin-right-8"></i>留言</button>
+            </div>
+          </div>
+          <!-- article 2 -->
+          <div class="shadow  padding-tb margin-bottom-24 round">
+            <div class="container">
+              <img src="https://unsplash.it/300/300?image=1005" width="60" height="60" class="circle left margin-right" alt="author">
+              <span class="right text-grey">1 min</span>
+              <h3 >Jon Deno</h3>
+              <br>
+              <hr class="clear">
+              <p>报道发出疑问，“韩国军队究竟是为了谁，又是谁的军队？”“当真是韩国国民的军队吗？”，并称可能是因为“已经有过两次通过军事政变推翻国民选择的经历”，所以将韩国国民和总统视作统帅才会如此别扭，否则韩国军方为何会如此盲目地效忠美国</p>
+            </div>
+            <div class="container">
+              <button class="button red"><i class="fa fa-thumbs-up margin-right-8"></i>喜欢</button>
+              <button class="button "><i class="fa fa-comment margin-right-8"></i>留言</button>
+            </div>
+          </div>
+          <!-- article 3-->
+          <div class="shadow  padding-tb margin-bottom-24 round">
+            <div class="container">
+              <img src="https://unsplash.it/300/300?image=1005" width="60" height="60" class="circle left margin-right" alt="author">
+              <span class="right text-grey">1 min</span>
+              <h3 >Jon Deno</h3>
+              <br>
+              <hr class="clear">
+              <p>报道发出疑问，“韩国军队究竟是为了谁，又是谁的军队？”“当真是韩国国民的军队吗？”，并称可能是因为“已经有过两次通过军事政变推翻国民选择的经历”，所以将韩国国民和总统视作统帅才会如此别扭，否则韩国军方为何会如此盲目地效忠美国</p>
+              <img src="https://unsplash.it/800/400?image=985" width="800" height="400" class="img" alt="article">
+            </div>
+            <div class="container margin-top">
+              <button class="button red"><i class="fa fa-thumbs-up margin-right-8"></i>喜欢</button>
+              <button class="button "><i class="fa fa-comment margin-right-8"></i>留言</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- col 3 -->
+        <div class="col l2 s12">
+          <div class="shadow container center padding-tb margin-bottom-24 round">
+            <p>要开始活动：</p>
+            <img src="https://unsplash.it/300/200?image=969" width="300" height="200" class="img" alt="img">
+            <h4>假日狂欢</h4>
+            <p>星期五 15:00</p>
+            <button class="button lightgrey hover-shadow-off hover-lightgray" style="width:100%">详 情</button>
+          </div>
+
+          <div class="shadow container center padding-tb margin-bottom-24 round">
+            <p>好友请求</p>
+            <img src="https://unsplash.it/300/300?image=838" width="80" height="80"  alt="img">
+            <p class="small wide-small">小鱼儿</p>
+            <div class="row">
+              <button class="button left lightgreen hover-shadow-off hover-lightgrey" style="width:50%">Yes</button>
+              <button class="button left lightred hover-shadow-off hover-lightgrey" style="width:50%">No</button>
+            </div>
+          </div>
+
+          <div class="shadow container center padding-tb margin-bottom-24 round">
+            <p>好友请求</p>
+            <img src="https://unsplash.it/300/300?image=838" width="80" height="80"  alt="img">
+            <p class="small wide-small">小鱼儿</p>
+            <div class="row">
+              <button class="button left lightgreen hover-shadow-off hover-lightgrey" style="width:50%">Yes</button>
+              <button class="button left lightred hover-shadow-off hover-lightgrey" style="width:50%">No</button>
+            </div>
+          </div>
+
+          <div class="shadow container center padding-tb margin-bottom-24 round">
+            <p>好友请求</p>
+            <img src="https://unsplash.it/300/300?image=838" width="80" height="80"  alt="img">
+            <p class="small wide-small">小鱼儿</p>
+            <div class="row">
+              <button class="button left lightgreen hover-shadow-off hover-lightgrey" style="width:50%">Yes</button>
+              <button class="button left lightred hover-shadow-off hover-lightgrey" style="width:50%">No</button>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="black margin-top padding-tb center">
+      <p>Power by <a href="http://www.lirenmi.cn" class="text-lightgray" target="_blank">lirenmi.cn</a></p>
+    </footer>
+
+    <script src="./js/base.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> animations </title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style media="screen">
+      /* animation-top */
+      .animate-top {
+        position: relative;
+        -webkit-animation: animationtop 0.6s;
+        animation: animationtop 0.6s;
+      }
+      @-webkit-keyframes animationtop {
+        from {top: -300px;opacity: 0;}
+        to {top: 0;opacity: 1}
+      }
+      @keyframes animationtop {
+        from {top: -300px;opacity: 0;}
+        to {top: 0;opacity: 1}
+      }
+
+      /* animation-bottom */
+      .animate-bottom {
+        position: relative;
+        -webkit-animation: animationbottom 0.6s;
+        animation: animationbottom 0.6s;
+      }
+      @-webkit-keyframes animationbottom {
+        from {bottom: -300px;opacity: 0;}
+        to {bottom: 0;opacity: 1}
+      }
+      @keyframes animationbottom {
+        from {bottom: -300px;opacity: 0;}
+        to {bottom: 0;opacity: 1}
+      }
+
+      /* animation-left */
+      .animate-left {
+        position: relative;
+        -webkit-animation: animationleft 0.6s;
+        animation: animationleft 0.6s;
+      }
+      @-webkit-keyframes animationleft {
+        from {left: -300px;opacity: 0;}
+        to {left: 0;opacity: 1}
+      }
+      @keyframes animationleft {
+        from {left: -300px;opacity: 0;}
+        to {left: 0;opacity: 1}
+      }
+      /* animation-right */
+      .animate-right {
+        position: relative;
+        -webkit-animation: animationright 0.6s;
+        animation: animationright 0.6s;
+      }
+      @-webkit-keyframes animationright {
+        from {right: -300px;opacity: 0;}
+        to {right: 0;opacity: 1}
+      }
+      @keyframes animationright {
+        from {right: -300px;opacity: 0;}
+        to {right: 0;opacity: 1;}
+      }
+
+      /* animation-opacity */
+      .animate-opacity {
+        -webkit-animation: animationopacity 0.4s;
+        animation: animationopacity 0.4s;
+      }
+      @-webkit-keyframes animationopacity {
+        from {opacity: 0;}
+        to {opacity: 1;}
+      }
+      @keyframes animationopacity {
+        from {opacity: 0;}
+        to {opacity: 1;}
+      }
+
+      /* animation-fading */
+      .animate-fading {
+        -webkit-animation: animationofading 10s infinite;
+        animation: animationofading 10s infinite;
+      }
+      @-webkit-keyframes animationofading {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0;}
+      }
+      @keyframes animationofading {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0;}
+      }
+
+      /* animation-spin */
+      .animate-spin {
+        -webkit-animation: animationospin 2s infinite linear;
+        animation: animationospin 2s infinite linear;
+      }
+      @-webkit-keyframes animationospin {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(359deg);}
+      }
+      @keyframes animationospin {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(359deg);}
+      }
+
+      /* animation-zoom */
+      .animate-zoom {
+        -webkit-animation: animationzoom 2s;
+        animation: animationzoom 2sr;
+      }
+      @-webkit-keyframes animationzoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+      }
+      @keyframes animationzoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h1 class="animate-top">animation top</h1>
+    <h1 class="animate-bottom">animation bottom</h1>
+    <h1 class="animate-left">animation left</h1>
+    <h1 class="animate-right">animation right</h1>
+    <h1>animate opacity</h1>
+    <img src="https://unsplash.it/300/300?image=1072" class="animate-opacity" width="300" height="300" alt="">
+    <h1>animate fading</h1>
+    <img src="https://unsplash.it/300/300?image=1067" class="animate-fading" width="300" height="300" alt="">
+    <h1>animate spin</h1>
+    <span><i class="fa fa-spinner animate-spin"  style="font-size: 60px;"></i></span>
+
+    <h1>animate zoom</h1>
+    <img src="https://unsplash.it/300/300?image=1059" class="animate-zoom" width="300" height="300" alt="">
+  </body>
+</html>

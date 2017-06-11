@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>img modal</title>
+    <style media="screen">
+      .pointer:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+      .modal {
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: none;
+      }
+      .bar {
+        text-align: right;
+        padding: 8px;
+      }
+      .close-btn {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .close-btn:hover {
+        color: #ccc;
+      }
+      .modal-inner {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 60px;
+      }
+      .modal-inner img {
+        width: 100%;
+        height: auto;
+      }
+      .shadow-4 {
+        -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.2), 0 4px 20px rgba(0,0,0,0.19);
+        -moz-box-shadow: 0 4px 10px rgba(0,0,0,0.2), 0 4px 20px rgba(0,0,0,0.19);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2), 0 4px 20px rgba(0,0,0,0.19);
+      }
+      /* animation-zoom */
+      .animate-zoom {
+        -webkit-animation: animationzoom 2s;
+        animation: animationzoom 2sr;
+      }
+      @-webkit-keyframes animationzoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+      }
+      @keyframes animationzoom {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://unsplash.it/400/300?image=1067" onclick="openModal();" class="pointer" width="400" height="300" alt="img">
+      <div id="modal" class="modal">
+        <div class="modal-dialog">
+          <div class="bar">
+            <button class="close-btn" onclick="closeModal();">×</button>
+          </div>
+          <div class="modal-inner">
+            <img src="https://unsplash.it/900/500?image=1067" width="900" class="shadow-4 animate-zoom" height="500" alt="sou">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function openModal() {
+        var modalNode = document.getElementById('modal');
+        modalNode.style.display = "block";
+      }
+      function closeModal() {
+        var modalNode = document.getElementById('modal');
+        modalNode.style.display = "none";
+      }
+
+    </script>
+  </body>
+</html>

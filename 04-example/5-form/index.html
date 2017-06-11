@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>form </title>
+    <style media="screen">
+      *, *::after, *::before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .shadow-2 {
+        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0,0.12);
+        -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0,0.12);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0,0.12);
+      }
+      .content {
+        max-width: 600px;
+        margin: 80px auto;
+        padding: 16px;
+      }
+      .form-control {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #eee;
+        height: 36px;
+        line-height: 20px;
+        padding: 8px 0 7px;
+        outline: 0;
+        border-radius: 0;
+        font-size: 14px;
+      }
+      label {
+        font-size: 13px;
+        font-weight: 400;
+      }
+      .form-group-label {
+        position: relative;
+        margin: 20px 0;
+      }
+      .floating-label {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+      }
+      .bar {
+        text-align: right;
+      }
+      .button {
+        border: none;
+        background-color: transparent;
+        padding: 8px 16px;
+        color: #ed6589;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      .button:hover {
+        background-color: #f1f1f1;
+      }
+
+      .control-focus .floating-label {
+        color: #ed6589;
+        transform: scale(0.85,0.85) translateY(-32px);
+      }
+      .control-focus .form-control {
+        border-bottom: 2px solid #ed6589;
+      }
+      select.form-control {
+        -webkit-appearance:none;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1ODZCNTU1QkIxQkUxMUU1OEYzRkZEMkE1Q0Y3MDFBNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1ODZCNTU1Q0IxQkUxMUU1OEYzRkZEMkE1Q0Y3MDFBNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU4NkI1NTU5QjFCRTExRTU4RjNGRkQyQTVDRjcwMUE3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU4NkI1NTVBQjFCRTExRTU4RjNGRkQyQTVDRjcwMUE3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TozEogAAAGxJREFUeNrs1DEOgDAIheHH4XpqDocdiInYVqA6mEBC2P5vg0QEXw4VUMCPACJq/bSXuty7bAEosIuwAhgBuwjrYgVkkTPuAaLIJe4FvMgtHgGekGE8CsyQaTwDWGQZzwIwAEJAPbsC0nMIMADa5XjRmvnODAAAAABJRU5ErkJggg==);
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        background-position: 100% 11px;
+      }
+      .control-heiglight .floating-label {
+        color: #888;
+        transform: scale(0.85,0.85) translateY(-32px);
+      }
+      .control-heiglight .form-control {
+        border-bottom: 1px solid #eee;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="content shadow-2">
+      <form class="" action="#" method="post">
+        <div class="form-group-label">
+          <label for="name" class="floating-label" >姓名</label>
+          <input type="text" class="form-control" id="name" name="name" value="">
+        </div>
+        <div class="form-group-label">
+          <label for="email" class="floating-label" >邮箱</label>
+          <input type="text" class="form-control" id="email" name="email" value="">
+        </div>
+        <div class="form-group-label ">
+          <label for="city" class="floating-label" >城市</label>
+          <select class="form-control" id="city" name="city">
+            <option value=""></option>
+            <option value="">上海</option>
+            <option value="">北京</option>
+            <option value="">广州</option>
+          </select>
+        </div>
+        <div class="form-group-label">
+          <label for="context" class="floating-label" >内容</label>
+          <textarea name="name" style="height: 150px;" class="form-control" rows="1" cols="80"></textarea>
+        </div>
+        <div class="bar">
+          <button class="button">提 交</button>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+
+      var es = document.getElementsByClassName('form-control');
+      for (var i=0; i<es.length; i++) {
+        es[i].onfocus = function () {
+          this.parentNode.className += " control-focus";
+        }
+        es[i].onblur = function () {
+          var val;
+          if (this.tagName == "SELECT") {
+            val = this.options[this.selectedIndex].text;
+          } else {
+            val = this.value;
+          }
+          if (val != '') {
+            this.parentNode.className = this.parentNode.className.replace("control-focus","control-heiglight");
+          } else {
+            this.parentNode.className = this.parentNode.className.replace("control-focus","");
+            this.parentNode.className = this.parentNode.className.replace("control-heiglight","");
+          }
+        }
+      }
+    </script>
+
+  </body>
+</html>

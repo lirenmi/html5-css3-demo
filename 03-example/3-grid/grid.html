@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>grid</title>
+    <style media="screen">
+
+      * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .row::after, .row::before {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .col {
+        float: left;
+      }
+
+      .l1 {width: 8.33%}
+      .l2 {width: 16.66%}
+      .l3 {width: 25%}
+      .l4 {width: 33.33%}
+      .l5 {width: 41.66%}
+      .l6 {width: 50%}
+      .l7 {width: 58.33%}
+      .l8 {width: 66.66%}
+      .l9 {width: 75%}
+      .l10 {width: 83.33%}
+      .l11 {width: 91.66%}
+      .l12 {width: 100%}
+
+      @media only screen and (max-width: 993px) {
+        .m1 {width: 8.33%}
+        .m2 {width: 16.66%}
+        .m3 {width: 25%}
+        .m4 {width: 33.33%}
+        .m5 {width: 41.66%}
+        .m6 {width: 50%}
+        .m7 {width: 58.33%}
+        .m8 {width: 66.66%}
+        .m9 {width: 75%}
+        .m10 {width: 83.33%}
+        .m11 {width: 91.66%}
+        .m12 {width: 100%}
+      }
+
+      @media only screen and (max-width: 600px) {
+        .s1 {width: 8.33%}
+        .s2 {width: 16.66%}
+        .s3 {width: 25%}
+        .s4 {width: 33.33%}
+        .s5 {width: 41.66%}
+        .s6 {width: 50%}
+        .s7 {width: 58.33%}
+        .s8 {width: 66.66%}
+        .s9 {width: 75%}
+        .s10 {width: 83.33%}
+        .s11 {width: 91.66%}
+        .s12 {width: 100%}
+      }
+
+
+
+
+      .border {
+        border: 3px solid #eb3535;
+      }
+      .row div {
+        background-color: #000;
+        color: #fff;
+        padding: 8px;
+        border-right: 3px solid #eb3535;
+      }
+      .row div:last-child {
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row border">
+      <div class="col l3 m5 s8">col 3</div>
+      <div class="col l3 m2 s1">col 3</div>
+      <div class="col l3 m2 s1">col 3</div>
+      <div class="col l3 m3 s2">col 3</div>
+    </div>
+    <br>
+    <div class="row border">
+      <div class="col l2">col 2</div>
+      <div class="col l5">col 5</div>
+      <div class="col l3">col 3</div>
+      <div class="col l2">col 2</div>
+    </div>
+    <br>
+    <div class="row border">
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+      <div class="col l1">col 1</div>
+
+    </div>
+
+  </body>
+</html>

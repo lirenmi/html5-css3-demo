@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>display</title>
+    <style media="screen">
+      #contaner {
+        width: 600px;
+        height: 300px;
+        background-color: #444;
+        color: #fff;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .relative-contaner {
+        position: relative;
+      }
+
+      .top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .top-middle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+      .top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .middle-left {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0,-50%);
+      }
+      .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+      }
+      .middle-right {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -moz-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+      }
+
+      .bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .bottom-middle {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -moz-transform: translate(-50%,0);
+        -ms-transform: translate(-50%,0);
+        -webkit-transform: translate(-50%,0);
+        transform: translate(-50%,0);
+      }
+      .bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      .inline-block {
+        display: inline-block;
+      }
+      .show {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+
+      .relative-contaner::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+
+      #contaner-2 {
+        max-width: 600px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contaner" class="relative-contaner ">
+      <div class="top-left">top-left</div>
+      <div class="top-middle">top-middle</div>
+      <div class="top-right">top-right</div>
+      <div class="middle-left">middle-left</div>
+      <div class="middle">middle</div>
+      <div class="middle-right left">middle-right</div>
+      <div class="bottom-left">bottom-left</div>
+      <div class="bottom-middle">bottom-middle</div>
+      <div class="bottom-right">bottom-right</div>
+    </div>
+    <br>
+    <div id="contaner-2" class="relative-contaner">
+      <img src="https://unsplash.it/600/300?image=978" width="600" height="300" alt="bg">
+      <div class="top-left">top-left</div>
+      <div class="top-middle">top-middle</div>
+      <div class="top-right">top-right</div>
+      <div class="middle-left">middle-left</div>
+      <div class="middle">middle</div>
+      <div class="middle-right">middle-right</div>
+      <div class="bottom-left">bottom-left</div>
+      <div class="bottom-middle">bottom-middle</div>
+      <div class="bottom-right">bottom-right</div>
+    </div>
+  </body>
+</html>

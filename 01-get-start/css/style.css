@@ -1,0 +1,100 @@
+
+html {
+  font-family: "Raleway",sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* --- header ---- */
+
+.header {
+  padding: 128px 0;
+  text-align: center;
+  opacity: 0.7;
+}
+.header h2, h1 {
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin: 32px 0;
+}
+.nav li {
+  display: inline-block;
+  float: left;
+}
+.nav li:hover {
+  background-color: #eee;
+}
+.nav li a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px
+}
+.nav li a.active {
+  background-color: #eee;
+}
+
+/* ---photo gird --- */
+.container {
+  padding: 0 8px;
+  filter: grayscale(0.7);
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 8px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* ---footer---*/
+
+.footer {
+  padding: 64px 0;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: 128px;
+}
+.footer a {
+  color: #333;
+}
+
+
+/* ---repsonsive---- */
+
+@media only screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}

@@ -1,0 +1,197 @@
+
+html {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* •––––––– nav style ––––––––•*/
+.nav {
+  text-align: right;
+}
+.button-bar {
+  border: none;
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 26px;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-bar:hover {
+  background-color: #ddd;
+}
+
+/*nav modal */
+
+.nav-modal {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+.button-close {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 26px;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  float: right;
+  overflow: hidden;
+}
+.button-close:hover {
+  background-color: #ddd;
+  color: #000;
+}
+.nav-modal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+          transform: translate(-50%,0);
+}
+.nav-modal li:hover a {
+  color: #fff;
+}
+.nav-modal li a {
+  display: block;
+  color: #999;
+  text-decoration: none;
+  font-size: 26px;
+  padding: 10px 0;
+  text-align: center;
+
+}
+
+.animation-top {
+  -webkit-animation: animationtop 0.4s;
+  animation: animationtop 0.4s;
+}
+@-webkit-keyframes animationtop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animationtop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* •––––––– header style ––––––––•*/
+
+.header {
+  padding: 34px 0;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.header h1 {
+  letter-spacing: 5px;
+}
+
+.button {
+  border: none;
+  padding: 10px 16px;
+  background-color: #111;
+  color: #fff;
+  font-size: 15px;
+  display: inline-block;
+  margin-top: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* •––––––– photo grid style ––––––––•*/
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column {
+  float: left;
+  width: 33.3333%;
+}
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -5px;
+}
+.space {
+  padding: 0 8px;
+}
+.space img {
+  margin-bottom: 8px;
+}
+.space .column {
+  padding: 0 8px;
+}
+/* -----footer----- */
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 64px 0;
+  text-align: center;
+  opacity: 0.7;
+  margin-top: 64px;
+}
+
+.iconbar {
+  font-size: 18px;
+}
+.iconbar i {
+  padding: 2px;
+  cursor: pointer;
+}
+.iconbar i:hover {
+  opacity: 0.7;
+}
+.footer a {
+  color: #000;
+}
+
+
+/* •––––––– responsive style ––––––––•*/
+
+@media only screen and (max-width: 600px)  {
+  .column {
+    width: 100%;
+  }
+}

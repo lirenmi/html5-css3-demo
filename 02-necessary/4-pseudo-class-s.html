@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS伪类选择器</title>
+    <style media="screen">
+
+      /*===== 伪类选择器 用于定义元素的特殊状态=== */
+
+      /*a 状态*/
+      /*unvisited link */
+      a:link {
+        font-size: 26px;
+        color: #000;
+      }
+      /*visited link */
+      a:visited {
+        font-size: 26px;
+        color: red;
+      }
+      /* mouse over link*/
+      a:hover {
+        font-size: 26px;
+        color: green;
+      }
+      /*selected link*/
+      a:active {
+        font-size: 26px;
+        color: blue;
+      }
+
+      /*hover */
+      div {
+        font-size: 28px;
+      }
+      p {
+        display: none;
+        padding: 15px;
+        background-color: #eee;
+      }
+      div:hover p {
+        display: block;
+      }
+      /*chid 选择*/
+      /*ul li:first-child, ul li:last-child {
+        color: red;
+      }*/
+
+      ul li:nth-child(2n+1) {
+        color: red;
+      }
+      ul li:nth-child(2n) {
+        color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- <a href="#" target="_blank">lirenmi.cn</a> -->
+    <div>
+      HTML
+      <p>超文本标记语言</p>
+    </div>
+
+    <ul>
+      <li>牛奶</li>
+      <li>面包</li>
+      <li>香蕉</li>
+      <li >苹果</li>
+      <li >苹果</li>
+      <li >苹果</li>
+      <li >苹果</li>
+      <li >苹果</li>
+    </ul>
+  </body>
+</html>
