@@ -1,69 +1,340 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>profile</title>
     <meta charset="utf-8">
-    <title>framework text</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/base.css">
     <style media="screen">
       .box {
         width: 100px;
         height: 100px;
+        margin: 5px;
         display: inline-block;
-
+        line-height: 100px;
       }
     </style>
   </head>
-  <body >
-    <div class="" style="padding: 0 16px;">
-      <h1>color tool</h1>
+  <body>
+    <div class="container">
+    <h1>color</h1>
       <hr>
-      <div class="blue hover-lightred" style="width:200px;height:50px">
+      <div class="">
+        <div class="row">
+          <div class="col l1 padding lightgrey">&nbsp;</div>
+          <div class="col l1 padding grey">&nbsp;</div>
+          <div class="col l1 padding darkgrey ">&nbsp;</div>
+          <div class="col l1 padding black">&nbsp;</div>
+
+          <div class="col l1 padding lightblue">&nbsp;</div>
+          <div class="col l1 padding blue">&nbsp;</div>
+          <div class="col l1 padding darkblue">&nbsp;</div>
+
+          <div class="col l1 padding lightred">&nbsp;</div>
+          <div class="col l1 padding red">&nbsp;</div>
+          <div class="col l1 padding darkred">&nbsp;</div>
+
+          <div class="col l1 padding lightgreen">&nbsp;</div>
+          <div class="col l1 padding green">&nbsp;</div>
+          <div class="col l1 padding darkgreen">&nbsp;</div>
+
+          <div class="col l1 padding lightorange">&nbsp;</div>
+          <div class="col l1 padding orange">&nbsp;</div>
+          <div class="col l1 padding darkorange">&nbsp;</div>
+
+          <div class="col l1 padding lightyellow">&nbsp;</div>
+          <div class="col l1 padding yellow">&nbsp;</div>
+          <div class="col l1 padding darkyellow">&nbsp;</div>
+
+        </div>
       </div>
-      <h1>border tool </h1>
+    <h1>font size</h1>
       <hr>
-      <div class="box border">
+      <p class="tiny">tiny 字体</p>
+      <p class="small">small 字体</p>
+      <p class="midium">midium 字体</p>
+      <p class="large">large 字体</p>
+      <p class="xlarge">xlarge 字体</p>
+      <p class="xxlarge">xxlarge 字体</p>
+      <p class="jumbo">jumbo 字体</p>
+
+      <h1>border</h1>
+      <hr>
+      <span style="width:100px;height:100px;display:inline-block" class="border ">
+      </span>
+      <span style="width:100px;height:100px;display:inline-block" class="border-left">
+      </span>
+      <span style="width:100px;height:100px;display:inline-block" class="border-right">
+      </span>
+      <span style="width:100px;height:100px;display:inline-block" class="border-top">
+      </span>
+      <span style="width:100px;height:100px;display:inline-block" class="border-bottom">
+      </span>
+
+      <p class="left-bar padding-small  border-lightred lightgray ">left bar</p>
+      <p class="right-bar padding-small  border-lightred lightgray ">right bar</p>
+      <p class="top-bar padding-small  border-lightred lightgray ">top bar</p>
+      <p class="bottom-bar padding-small  border-lightred lightgray ">bottom bar</p>
+
+      <h1>round</h1>
+      <hr>
+      <div class="box lightred round-small">
       </div>
-      <div class="box border-left">
+      <div class="box lightred round">
       </div>
-      <div class="box border-right">
+      <div class="box lightred round-large">
       </div>
-      <div class="box border-top">
+      <div class="box lightred round-xlarge">
       </div>
-      <div class="box left-bar">
+      <div class="box lightred round-xxlarge">
+      </div>
+      <div class="box lightred circle">
       </div>
 
-      <h1>round tool</h1>
+      <h1>grayscale</h1>
       <hr>
-      <div class="box circle lightred">
-      </div>
-      <div class="box round lightred">
-      </div>
+      <img src="https://unsplash.it/300/200?image=1005" class="" width="300" height="200" alt="grayscale">
+      <img src="https://unsplash.it/300/200?image=1005" class="grayscale-min hover-grayscale" width="300" height="200" alt="grayscale">
+      <img src="https://unsplash.it/300/200?image=1005" class="grayscale hover-grayscale-max" width="300" height="200" alt="grayscale">
+      <img src="https://unsplash.it/300/200?image=1005" class="grayscale-max hover-grayscale-min" width="300" height="200" alt="grayscale">
 
-      <h1>opacity tool </h1>
+      <h1>opacity</h1>
       <hr>
-      <div class="box circle opacity-off lightred">
+      <div class="box lightred circle opacity-off">
       </div>
-      <div class="box circle opacity-min lightred">
+      <div class="box lightred circle opacity-min">
       </div>
-      <div class="box circle opacity lightred">
+      <div class="box lightred circle opacity">
       </div>
-      <div class="box circle opacity-max lightred">
+      <div class="box lightred circle opacity-max">
       </div>
 
       <h1>text-align</h1>
-      <hr>
-      <div class="grey left-align">
-        left-align
+      <p class="left-align lightgray">left-align</p>
+      <p class="right-align lightgray">right-align</p>
+      <p class="center lightgray">center</p>
+
+      <h1>shadow</h1>
+      <div class="box circle shadow-small hover-shadow-large">
       </div>
-      <br>
-      <div class="grey right-align">
-        right-align
+      <div class="box circle shadow hover-shadow-small">
       </div>
-      <br>
-      <div class="grey center">
-        center
+      <div class="box circle shadow-large hover-shadow">
       </div>
 
+      <h1>margin</h1>
+      <p class="lightgray"><span class="inline-block grey margin-small">margin-small</span></p>
+      <p class="lightgray"><span class="inline-block grey margin">margin</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-large">margin-large</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-8-16">margin-8-16</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-16-24">margin-16-24</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-tb">margin-tb</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-tb-24">margin-tb-24</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-tb-32">margin-tb-32</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-tb-48">margin-tb-48</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-tb-96">margin-tb-96</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-top">margin-top</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-top-24">margin-top-24</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-top-32">margin-top-32</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-top-64">margin-top-64</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-top-96">margin-top-96</span></p>
+      <p class="lightgray"><span class="inline-block grey margin-top-128">margin-top-128</span></p>
+
+      <h1>padding</h1>
+      <hr>
+      <p class="lightgray padding-small">padding-small</p>
+      <p class="lightgray padding">padding</p>
+      <p class="lightgray padding-large">padding-large</p>
+      <p class="lightgray padding-4-8">padding-4-8</p>
+      <p class="lightgray padding-8-16">padding-8-16</p>
+      <p class="lightgray padding-16-24">padding-16-24</p>
+      <p class="lightgray padding-tb">padding-tb</p>
+      <p class="lightgray padding-tb-24">padding-tb-24</p>
+      <p class="lightgray padding-tb-32">padding-tb-32</p>
+      <p class="lightgray padding-tb-48">padding-tb-48</p>
+      <p class="lightgray padding-tb-64">padding-tb-64</p>
+      <p class="lightgray padding-tb-96">padding-tb-96</p>
+
+     <h1>animation</h1>
+     <hr>
+     <div class="box circle shadow center lightred animate-top ">
+       animate-top
+     </div>
+     <div class="box circle shadow center lightgreen animate-bottom">
+       bottom
+     </div>
+     <div class="box circle shadow center lightblue animate-right ">
+       right
+     </div>
+     <div class="box circle shadow center lightgrey animate-left ">
+       left
+     </div>
+     <div class="box circle shadow center lightyellow animate-opacity ">
+       opacity
+     </div>
+     <div class="box circle shadow center lightorange animate-fading ">
+       fading
+     </div>
+     <div class="box circle shadow center blue animate-spin ">
+       spin
+     </div>
+     <div class="box circle shadow center orange animate-zoom ">
+       zoom
+     </div>
+
+
+
+      <h1>grid</h1>
+      <hr>
+      <div class="row">
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+        <div class="col l1 ">
+          <div class="border border-black center lightred">l1</div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col l2 m3 s12 ">
+          <div class="border border-black center lightred">l2 m3 s12</div>
+        </div>
+        <div class="col l4 m6 s12 ">
+          <div class="border border-black center lightred">l4 m6 s12</div>
+        </div>
+        <div class="col l6 m3 s12 ">
+          <div class="border border-black center lightred">l6 m3 s12</div>
+        </div>
+      </div>
+      <br>
+      <h4>row-padding</h4>
+      <div class="row-padding">
+        <div class="col l2 m3 s12 ">
+          <div class="border border-black center lightred">l2 m3 s4</div>
+        </div>
+        <div class="col l4 m6 s12 ">
+          <div class="border border-black center lightred">4 m6 s12</div>
+        </div>
+        <div class="col l6 m3 s12 ">
+          <div class="border border-black center lightred">l6 m3 s12</div>
+        </div>
+      </div>
+
+      <h1>display</h1>
+      <hr>
+      <div class="relative-contaner lightorange" style="width:500px;height: 300px;">
+        <div class="top-left">
+          <span>top-left</span>
+        </div>
+        <div class="top-middle">
+          <span>top-middle</span>
+        </div>
+        <div class="top-right">
+          <span>top-right</span>
+        </div>
+        <div class="middle-left">
+          <span>middle-left</span>
+        </div>
+        <div class="middle">
+          <span>middle</span>
+        </div>
+        <div class="middle-right">
+          <span>middle-right</span>
+        </div>
+        <div class="bottom-left">
+          <span>bottom-left</span>
+        </div>
+        <div class="bottom-middle">
+          <span>bottom-middle</span>
+        </div>
+        <div class="bottom-right">
+          <span>bottom-right</span>
+        </div>
+      </div>
+
+      <h1>button</h1>
+      <hr>
+      <button class="button">button</button>
+      <button class="button red">button</button>
+      <button class="button lightgrey">button</button>
+      <button class="button lightgreen">button</button>
+      <button class="button" disabled >disabled</button>
+      <button class="button disabled"  >disabled</button>
+      <button class="btn"  >提交</button>
+      <button class="btn text-red"  >提交</button>
+      <button class="btn text-green"  >提交</button>
+      <button class="btn text-blue"  >提交</button>
+      <button class="btn" disabled >提交</button>
+      <button class="btn disabled"  >提交</button>
+
+      <h1>form</h1>
+      <hr>
+      <div class="content shadow-small padding">
+        <form class="" action="#" method="post">
+          <div class="form-group-label">
+            <label for="name" class="floating-label" >姓名</label>
+            <input type="text" class="form-control" id="name" name="name" value="">
+          </div>
+          <div class="form-group-label">
+            <label for="email" class="floating-label" >邮箱</label>
+            <input type="text" class="form-control" id="email" name="email" value="">
+          </div>
+          <div class="form-group-label ">
+            <label for="city" class="floating-label" >城市</label>
+            <select class="form-control" id="city" name="city">
+              <option value=""></option>
+              <option value="">上海</option>
+              <option value="">北京</option>
+              <option value="">广州</option>
+            </select>
+          </div>
+          <div class="form-group-label">
+            <label for="context" class="floating-label" >内容</label>
+            <textarea name="name" style="height: 150px;" class="form-control" rows="1" cols="80"></textarea>
+          </div>
+          <div class="right-align">
+            <button class="btn">提 交</button>
+          </div>
+        </form>
+      </div>
+
+      <h1>tag</h1>
+      <hr>
+      <span class="tag">tag</span>
+      <span class="badge">b</span>
+      <span>上标<sup class="sup">sup</sup></span>
+      <span>下标<sub class="sub">sub</sub></span>
       <h1>table</h1>
       <hr>
       <div class="table-responsive">
@@ -77,7 +348,7 @@
   				</thead>
   				<tbody>
   					<tr>
-  						<td >Id augue sagittis</td>
+  						<td>Id augue sagittis</td>
   						<td >Eleifend metus eget</td>
   						<td>Lacinia eros curabitur</td>
   					</tr>
@@ -125,10 +396,109 @@
   			</table>
       </div>
 
+      <h1>list</h1>
+      <hr>
+      <ul class="list">
+        <li>香蕉</li>
+        <li>土豆</li>
+        <li>苹果</li>
+        <li>橘子</li>
+        <li>菠萝</li>
+      </ul>
+
+      <h1>nav dropdown</h1>
+      <hr>
+      <ul class="nav ">
+        <li><a href="#">首页</a></li>
+        <li><a href="#" class="active">作品</a></li>
+        <li><a href="#">商城</a></li>
+        <li><a href="#">关于</a></li>
+      </ul>
+      <br>
+
+      <ul class="nav nav-h ">
+        <li><a href="#">首页</a></li>
+        <li><a href="#" class="active">作品</a></li>
+        <li><a href="#">商城</a></li>
+        <li class="dropdown">
+          <a href="#">更多</a>
+          <div class="dropdown-content">
+            <a href="#">合作</a>
+            <a href="#">合作</a>
+            <a href="#">合作</a>
+          </div>
+        </li>
+        <li class="right"><a href="#" >关于</a></li>
+      </ul>
+
+
+      <h1>modal</h1>
+      <hr>
+      <button class="button red" onclick="openModal()">modal</button>
+      <div id="modal" class="modal">
+        <div class="modal-dialog">
+          <div id="modalContent" class="modal-content ">
+            <div class="modal-heading">
+              <h2 class="modal-title">Modal Title</h2>
+              <button class="close-btn" onclick="closeModal();">×</button>
+            </div>
+            <div class="modal-inner">
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <img src="https://unsplash.it/900/500?image=1067" class="img" width="900" height="500" alt="content">
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div class="modal-footer">
+              <button class="close-button" onclick="closeModal();">CLOSE</button>
+              <button class="ok-button">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </div>
 
+
+    <script type="text/javascript">
+
+      function openModal() {
+        var modalNode = document.getElementById('modal');
+        modalNode.style.display = "block";
+        var modalContentNode = document.getElementById('modalContent');
+        modalContentNode.className = modalContentNode.className.replace("close-modal-animate", "");
+      }
+      function closeModal() {
+        var modalNode = document.getElementById('modal');
+        var modalContentNode = document.getElementById('modalContent');
+        modalContentNode.className = modalContentNode.className + " close-modal-animate";
+        setTimeout(function () {
+          modalNode.style.display = "none";
+        }, 400);
+      }
+
+
+      // form
+      var es = document.getElementsByClassName('form-control');
+      for (var i=0; i<es.length; i++) {
+        es[i].onfocus = function () {
+          this.parentNode.className += " control-focus";
+        }
+        es[i].onblur = function () {
+          var val;
+          if (this.tagName == "SELECT") {
+            val = this.options[this.selectedIndex].text;
+          } else {
+            val = this.value;
+          }
+          if (val != '') {
+            this.parentNode.className = this.parentNode.className.replace("control-focus","control-heiglight");
+          } else {
+            this.parentNode.className = this.parentNode.className.replace("control-focus","");
+            this.parentNode.className = this.parentNode.className.replace("control-heiglight","");
+          }
+        }
+      }
+    </script>
 
   </body>
 </html>
